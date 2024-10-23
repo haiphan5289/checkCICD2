@@ -51,7 +51,7 @@ jobs:
           -configuration Debug \
           -destination 'generic/platform=iOS' \
           CODE_SIGN_IDENTITY="iPhone Developer" \
-          PROVISIONING_PROFILE_SPECIFIER="hai_phan_check_ci_cd_2" \
+          PROVISIONING_PROFILE_SPECIFIER="hai phan check ci cd 2" \
           clean archive
 
       - name: export ipa
