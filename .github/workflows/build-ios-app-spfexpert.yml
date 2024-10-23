@@ -50,11 +50,13 @@ jobs:
       - name: build archive
         run: |
           xcodebuild -scheme "checkcicd2" \
-          -archivePath $RUNNER_TEMP/checkcicd2.xcarchive \
-          -sdk iphoneos \
-          -configuration Debug \
-          -destination generic/platform=iOS \
-          clean archive
+         -archivePath $RUNNER_TEMP/checkcicd2.xcarchive \
+         -sdk iphoneos \
+         -configuration Debug \
+         -destination generic/platform=iOS \
+         CODE_SIGN_IDENTITY="iPhone Developer" \
+         PROVISIONING_PROFILE_SPECIFIER="e0bd16cb-a969-4fe8-9169-2fe133efaac7" \
+         clean archive
 
       - name: export ipa
         env:
