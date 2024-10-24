@@ -50,8 +50,6 @@ jobs:
           -sdk iphoneos \
           -configuration Debug \
           -destination 'generic/platform=iOS' \
-          CODE_SIGN_IDENTITY="iOS Developer" \
-          PROVISIONING_PROFILE_SPECIFIER="haiphan checkcicd4" \
           clean archive
 
       - name: export ipa
