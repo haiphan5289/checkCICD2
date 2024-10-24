@@ -50,9 +50,7 @@ jobs:
           -sdk iphoneos \
           -configuration Debug \
           -destination 'generic/platform=iOS' \
-         clean archive \
-         -allowProvisioningUpdates \
-         CODE_SIGN_STYLE=Automatic
+          clean archive
 
       - name: export ipa
         env:
